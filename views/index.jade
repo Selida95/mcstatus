@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  script(src="http://localhost:3000/js/mcstatus.js")
+  div.server-status
+    | My awesome server is currently 
+    span.server-online
+
+  script.
+    MinecraftAPI.getServerStatus('mc.crewcraftserver.net', {
+      port : 25566
+    }, (error, status) => {
+      if (error) {
+        return document.querySelector('.server-status').innerHTML = 'Error loading status';
+      }
+
+      // you can change these to your own message!
+      document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+    })
