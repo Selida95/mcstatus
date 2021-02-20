@@ -3,7 +3,6 @@
 
     var SelidaAPI, MinecraftAPI, baseURL;
 
-    //baseURL = 'https://mcstatus.iamsel.net';
     baseURL = 'https://mcstatus.iamsel.net';
 
     SelidaAPI = (function () {
@@ -53,7 +52,6 @@
             params = this.queryString(params);
 
             url = baseURL + endpoint + params;
-            console.log(url)
 
             xhr = new XMLHttpRequest();
 
@@ -67,7 +65,6 @@
                 try {
                     data = JSON.parse(xhr.responseText);
                 } catch (e) {
-                    console.log(e)
                     return callback(e);
                 }
 
@@ -110,7 +107,6 @@
             }
 
             options['address'] = ip;
-            console.log(ip)
 
             api.loadJSON('/', options, callback);
         };
