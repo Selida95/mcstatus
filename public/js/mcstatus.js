@@ -4,7 +4,7 @@
     var SelidaAPI, MinecraftAPI, baseURL;
 
     //baseURL = 'https://mcstatus.iamsel.net';
-    baseURL = 'http://localhost:3000';
+    baseURL = 'https://mcstatus.iamsel.net';
 
     SelidaAPI = (function () {
         /**
