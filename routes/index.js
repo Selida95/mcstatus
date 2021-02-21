@@ -13,7 +13,7 @@
  router.get('/', (req, res, next) => {
    let server_info = {}
 
-   const port = req.query.port && req.query.port.length > 0 ? req.query.port : false;
+   const port = req.query.port && req.query.port.length > 0 ? req.query.port : 25565;
    const address = req.query.address && req.query.address.length > 0 ? req.query.address : false;
 
    if (address) {
@@ -21,7 +21,7 @@
      let data
      let error
 
-     client.connect(port ? port : 25565, address, () => {
+     client.connect(port, address, () => {
        console.log('Connected to requested minecraft server...')
        client.write(Buffer.from([ 0xFE, 0x01 ]))
      })
