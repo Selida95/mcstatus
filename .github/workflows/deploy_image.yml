@@ -13,7 +13,7 @@ jobs :
       uses: docker/build-push-action@v1
       with: 
         username: ${{ github.actor }}
-        password: ${{ secrets.MCSTATUS_TOKEN }}
+        password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
         repository: ${{ github.repository }}/mcstatus
         tag_with_sha: true
