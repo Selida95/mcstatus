@@ -14,11 +14,11 @@ jobs :
     - name: Login to Registry
       uses: docker/login-action@v1
       with:
-        registry: https://docker.pkg.github.com
+        registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build container image
       uses: docker/build-push-action@v2
       with: 
         push: true
-        tags: docker.pkg.github.com/selida95/mcstatus/mcstatus_docker:latest
+        tags: ghcr.io/selida95/mcstatus/mcstatus_docker:latest
