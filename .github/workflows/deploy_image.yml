@@ -21,4 +21,4 @@ jobs :
       uses: docker/build-push-action@v2
       with: 
         push: true
-        tags: docker.pkg.github.com/${{ github.repository_owner }}/mcstatus:latest
+        tags: docker.pkg.github.com/selida95/mcstatus:latest
