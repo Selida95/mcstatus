@@ -21,4 +21,4 @@ jobs :
       uses: docker/build-push-action@v2
       with: 
         push: true
-        tags: Selida95/mcstatus/mcstatus:${{ env.IMAGE_TAG }}
+        tags: docker.pkg.github.com/${{ github.repository_ownder }}/mcstatus:${{ env.IMAGE_TAG }}
